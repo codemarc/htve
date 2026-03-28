@@ -5,20 +5,21 @@ interface PlatformFilterProps {
   onChange: (platforms: Platform[]) => void
 }
 
-const PLATFORMS: { key: Platform; label: string }[] = [
-  { key: "ios", label: "iOS" },
-  { key: "android", label: "Android" },
-  { key: "web", label: "Web" },
-]
+// const PLATFORMS: { key: Platform; label: string }[] = [
+//   { key: "ios", label: "iOS" },
+//   { key: "android", label: "Android" },
+//   { key: "web", label: "Web" },
+// ]
 
-export default function PlatformFilter({ active, onChange }: PlatformFilterProps) {
-  const toggle = (platform: Platform) => {
-    if (active.includes(platform)) {
-      onChange(active.filter((p) => p !== platform))
-    } else {
-      onChange([...active, platform])
-    }
-  }
+export default function PlatformFilter({ }: PlatformFilterProps) {
+// export default function PlatformFilter({ active, onChange }: PlatformFilterProps) {
+  // const toggle = (platform: Platform) => {
+  //   if (active.includes(platform)) {
+  //     onChange(active.filter((p) => p !== platform))
+  //   } else {
+  //     onChange([...active, platform])
+  //   }
+  // }
 
   return (
 			<div className="platform-filter">
