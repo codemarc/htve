@@ -6,6 +6,14 @@ import SearchBar from "./components/SearchBar"
 import PlatformFilter from "./components/PlatformFilter"
 import ChannelList from "./components/ChannelList"
 
+const CHROME_WEB_STORE_URL =
+  "https://chromewebstore.google.com/detail/htve/jaomdcfbhpnijboploadmkolfppdlgkc"
+
+const extensionVersion: string | undefined =
+  typeof chrome !== "undefined" && chrome.runtime?.getManifest
+    ? chrome.runtime.getManifest().version
+    : undefined
+
 export default function App() {
   const [query, setQuery] = useState("")
   const [activePlatforms, setActivePlatforms] = useState<Platform[]>([])
@@ -34,7 +42,22 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Hotwire TV Everywhere</h1>
+        <h1>
+          Hotwire TV Everywhere
+          {extensionVersion != null && extensionVersion !== "" ? (
+            <>
+              {" "}
+              <a
+                className="app-version"
+                href={CHROME_WEB_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ver {extensionVersion}
+              </a>
+            </>
+          ) : null}
+        </h1>
         <span className="channel-count">{filtered.length} channels</span>
       </header>
       <div className="controls">
