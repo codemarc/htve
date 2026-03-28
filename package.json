@@ -1,0 +1,35 @@
+{
+  "name": "htve",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hotwire TV Everywhere Chrome Extension",
+  "author": {
+    "name": "Marc J. Greenberg",
+    "email": "marc@braintrailz.com",
+    "url": "http://braintrailz.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codemarc/htve/issues"
+  },
+  "homepage": "https://github.com/codemarc/htve#readme",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && cp manifest.json dist/ && cp -r public/icons dist/",
+    "preview": "vite preview",
+    "package": "bun package.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.38",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.1"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  }
+}
