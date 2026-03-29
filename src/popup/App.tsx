@@ -2,12 +2,12 @@ import { useCallback, useEffect, useState } from "react"
 import { channels } from "../data/channels"
 import { getFavorites, toggleFavorite } from "../utils/favorites"
 import { filterChannels, type Platform } from "../utils/filter"
-import SearchBar from "./components/SearchBar"
-import PlatformFilter from "./components/PlatformFilter"
 import ChannelList from "./components/ChannelList"
+import PlatformFilter from "./components/PlatformFilter"
+import SearchBar from "./components/SearchBar"
 
 const CHROME_WEB_STORE_URL =
-  "https://chromewebstore.google.com/detail/htve/jaomdcfbhpnijboploadmkolfppdlgkc"
+  "https://chromewebstore.google.com/detail/hotwire-tv-everywhere/obijbomlnicgdnanhfemmcecdcapaphk"
 
 const extensionVersion: string | undefined =
   typeof chrome !== "undefined" && chrome.runtime?.getManifest

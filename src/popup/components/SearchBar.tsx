@@ -26,7 +26,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         onChange={(e) => setValue(e.target.value)}
       />
       {value && (
-        <button className="clear-btn" onClick={() => setValue("")}>
+        <button type="button" className="clear-btn" onClick={() => setValue("")}>
           &times;
         </button>
       )}
